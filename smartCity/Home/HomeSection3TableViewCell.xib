@@ -14,14 +14,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="KGk-i7-Jjw" customClass="HomeSection2TableViewCell" customModule="smartCity" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="KGk-i7-Jjw" customClass="HomeSection3TableViewCell" customModule="smartCity" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="405" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="405" height="127.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G4z-bo-dfZ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_nomalImage" translatesAutoresizingMaskIntoConstraints="NO" id="G4z-bo-dfZ">
                         <rect key="frame" x="17" y="13" width="83" height="62"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="62" id="R3u-Px-fxw"/>
@@ -43,7 +43,7 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-Pf-iGH">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-Pf-iGH" customClass="LineLabel" customModule="smartCity" customModuleProvider="target">
                         <rect key="frame" x="108" y="89" width="289" height="1"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -62,6 +62,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="ro9-Rh-pLd"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="Cny-qS-E76"/>
+                        </connections>
                     </collectionView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充电1.9元/度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sq-eD-qrb">
                         <rect key="frame" x="108" y="67.5" width="289" height="13.5"/>
@@ -78,6 +82,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="UMa-6Q-ImY"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="rYM-Q7-4FC"/>
+                        </connections>
                     </collectionView>
                 </subviews>
                 <constraints>
@@ -107,6 +115,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="distanceLabel" destination="pYj-Ce-sdN" id="tmg-GX-r9S"/>
+                <outlet property="headImage" destination="G4z-bo-dfZ" id="f4b-q7-rFP"/>
                 <outlet property="parkingNumCollectionView" destination="aMk-CW-PNN" id="Jqc-I1-xgV"/>
                 <outlet property="priceLabel" destination="9Sq-eD-qrb" id="abC-rM-Zym"/>
                 <outlet property="tagCollectionView" destination="gaQ-Wz-dlt" id="VLg-lD-Aqx"/>
@@ -115,4 +124,7 @@
             <point key="canvasLocation" x="67.5" y="94"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="common_nomalImage" width="500" height="500"/>
+    </resources>
 </document>

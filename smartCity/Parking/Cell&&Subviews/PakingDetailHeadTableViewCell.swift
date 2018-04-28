@@ -10,6 +10,10 @@ import UIKit
 
 class PakingDetailHeadTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var headImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var openTimeLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

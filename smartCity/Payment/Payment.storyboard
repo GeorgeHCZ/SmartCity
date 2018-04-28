@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="brG-dn-Qkg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Payment View Controller-->
+        <scene sceneID="Cqd-Zc-edu">
+            <objects>
+                <viewController storyboardIdentifier="PaymentViewController" id="brG-dn-Qkg" customClass="PaymentViewController" customModule="smartCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6V0-gy-3TV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IuW-5W-qiN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="brG-dn-Qkg" id="Pda-63-cKl"/>
+                                    <outlet property="delegate" destination="brG-dn-Qkg" id="O2G-zf-oId"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgF-n5-i2Z">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计：￥ 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixu-Qm-6H7">
+                                        <rect key="frame" x="202" y="14.5" width="65" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lce-FW-eZI">
+                                        <rect key="frame" x="275" y="0.0" width="100" height="44"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.47058823529999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="9NI-Yj-ER4"/>
+                                        </constraints>
+                                        <state key="normal" title="结算（0）">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcp-B4-FEE">
+                                        <rect key="frame" x="8" y="0.0" width="70" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="VK7-ni-9io"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="全选" image="payment_payDefault_style1">
+                                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="totalSelectButtonClick:" destination="brG-dn-Qkg" eventType="touchUpInside" id="sum-ID-OAY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rcp-B4-FEE" firstAttribute="top" secondItem="FgF-n5-i2Z" secondAttribute="top" id="6ZC-3e-Lwg"/>
+                                    <constraint firstItem="Lce-FW-eZI" firstAttribute="leading" secondItem="ixu-Qm-6H7" secondAttribute="trailing" constant="8" id="LPN-Hm-GUq"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lce-FW-eZI" secondAttribute="bottom" id="NYK-ZC-to3"/>
+                                    <constraint firstItem="Lce-FW-eZI" firstAttribute="top" secondItem="FgF-n5-i2Z" secondAttribute="top" id="R6a-Pe-YAW"/>
+                                    <constraint firstAttribute="height" constant="44" id="V6Z-Zd-z4Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="rcp-B4-FEE" secondAttribute="bottom" id="Wdw-kq-4LU"/>
+                                    <constraint firstItem="rcp-B4-FEE" firstAttribute="leading" secondItem="FgF-n5-i2Z" secondAttribute="leading" constant="8" id="ZcC-eq-Lab"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lce-FW-eZI" secondAttribute="trailing" id="xg5-g9-2cf"/>
+                                    <constraint firstItem="ixu-Qm-6H7" firstAttribute="centerY" secondItem="FgF-n5-i2Z" secondAttribute="centerY" id="ySV-Gv-ssU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IuW-5W-qiN" firstAttribute="top" secondItem="6V0-gy-3TV" secondAttribute="top" id="3ct-nt-CPp"/>
+                            <constraint firstItem="IuW-5W-qiN" firstAttribute="trailing" secondItem="y2s-S6-DIh" secondAttribute="trailing" id="9W7-4a-ZlG"/>
+                            <constraint firstItem="y2s-S6-DIh" firstAttribute="bottom" secondItem="FgF-n5-i2Z" secondAttribute="bottom" id="AYU-Ak-ozM"/>
+                            <constraint firstItem="IuW-5W-qiN" firstAttribute="leading" secondItem="y2s-S6-DIh" secondAttribute="leading" id="frV-ub-FdJ"/>
+                            <constraint firstItem="FgF-n5-i2Z" firstAttribute="leading" secondItem="y2s-S6-DIh" secondAttribute="leading" id="nXQ-xG-QIE"/>
+                            <constraint firstItem="FgF-n5-i2Z" firstAttribute="trailing" secondItem="y2s-S6-DIh" secondAttribute="trailing" id="uLb-uL-MVL"/>
+                            <constraint firstItem="FgF-n5-i2Z" firstAttribute="top" secondItem="IuW-5W-qiN" secondAttribute="bottom" id="w6u-Ca-Qtg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y2s-S6-DIh"/>
+                    </view>
+                    <connections>
+                        <outlet property="_tableView" destination="IuW-5W-qiN" id="gcD-V3-CBT"/>
+                        <outlet property="allSelectButton" destination="rcp-B4-FEE" id="tCK-i0-o9Q"/>
+                        <outlet property="paymentButton" destination="Lce-FW-eZI" id="OmR-j5-xLc"/>
+                        <outlet property="selectTotalPrice" destination="ixu-Qm-6H7" id="OMr-td-9b1"/>
+                        <outlet property="toolBarHeight" destination="V6Z-Zd-z4Z" id="Qs8-aI-RPm"/>
+                        <outlet property="toolBarView" destination="FgF-n5-i2Z" id="GGJ-8I-iua"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3f-1e-l7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1405.5999999999999" y="74.212893553223395"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="payment_payDefault_style1" width="20" height="20"/>
+    </resources>
+</document>

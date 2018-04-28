@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+
+class LineLabel:UILabel{
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        for line in self.constraints{
+            if line.constant==1{
+                line.constant=1/UIScreen.main.scale
+            }
+        }
+    }
+}

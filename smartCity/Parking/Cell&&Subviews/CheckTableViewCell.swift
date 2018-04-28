@@ -10,6 +10,8 @@ import UIKit
 
 class CheckTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var selectImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
